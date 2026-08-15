@@ -8,7 +8,7 @@ static $pdo = null;
 if($pdo == null){
 
 $pdo = new PDO(
-        "pgsql:host=localhost;dbname=gestiondette;port=5432",
+        "pgsql:host=localhost;dbname=managerPro;port=5432",
         "postgres",
         "user1234"
     );

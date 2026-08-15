@@ -4,10 +4,10 @@
 -- Table commandes id SERIAL PRIMARY,datCommande, montantinitial  NUMERIC(10,2),  montantAvance NUMERIC(10,2)
 -- client_id INT REFERENCES clients (id)
 
---  Table dettesid  SERIAL PRIMARY KEY, refDette VARCHAR , date Date, montantInitial  NUMERIC(10,2),
+--  Table dettes id  SERIAL PRIMARY KEY, refDette VARCHAR , date Date, montantInitial  NUMERIC(10,2),
 -- montantPaye  NUMERIC(10,2), resteDu  NUMERIC(10,2), id_commande INT REFERENCES commandes(id)
 
---  Table reglements id SERIAL PRIMARY,date DATE, montant  NUMERIC(10,2)
+--  Table reglements id SERIAL PRIMARY,dateReglement DATE, montant  NUMERIC(10,2)
 -- commande_id INT REFERENCES commandes (id)
 
 -- TABLE roles id SERIAL PRIMARY KEY,  nom VARCHAR NOT NULL UNIQUE

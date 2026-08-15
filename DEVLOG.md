@@ -18,3 +18,6 @@ J'ai un problème avec database, comment l'intégrer en POO
 un probleme aussi avec mon github sur les branche.
 
 j'ai fait des modification sur le diagramme de classe  ajouter une classe modifier des types
+
+
+J'ai cree le base de  donnees avant de creer les Entity
