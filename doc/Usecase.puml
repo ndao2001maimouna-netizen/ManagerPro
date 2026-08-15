@@ -1,0 +1,79 @@
+@startuml usercase
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Admin" as admin
+actor "Vente" as vente
+actor "Stock" as stock
+actor "Inventaire" as inventaire
+
+
+rectangle "StoreManager Pro" {
+  usecase "Consulter le tableau de bord" as CTB
+  usecase "Ventes Recentes" as VR 
+  usecase "Dettes du Jour" as DJ
+  usecase "Rupture Stock" as RS
+  usecase "Livraisions du Jour" as LJ
+  usecase "Clients Debiteurs" as CD
+  usecase "Solde Founiseurs" as SD
+  usecase "ventes/POS" as VP
+  usecase "Enregistrer Vente" as EV
+  usecase "Lister Vente" as LV
+  usecase "Lister Produit" as LP
+  usecase "Gestion Dettes" as GD
+  usecase "Lister Dettes" as LD
+  usecase "Enregistrer Paiement" as EP
+  usecase "Enregistrer Rembousement" as EM 
+  usecase "Gestion Approvisionnement" as GA
+  usecase "Bordereaux de Livraison " as BL
+  usecase "Receptionner BL " as RB
+  usecase "Produit & Tiers" as PT
+  usecase "Enregistrer Fournisseur" as EF
+    usecase "Gestion Produit" as GP
+    usecase "Gestion Client" as GC
+    usecase "Gestion Fournisseur" as GF
+    usecase "Ajouter Produit" as AP
+ usecase "Lister Produit" as L
+ 
+}
+
+
+admin --> CTB
+admin --> VP
+admin --> GD
+admin --> GA
+admin --> PT
+
+vente --> VP
+
+stock --> GA
+
+inventaire --> PT
+inventaire --> CTB
+
+CTB ..> VR : <<include>>
+CTB ..> DJ : <<include>>
+CTB ..> RS : <<include>>
+CTB ..> LJ : <<include>>
+CTB ..> CD : <<include>>
+CTB ..> SD : <<include>>
+
+VP ..> EV : <<include>>
+EV <.. AP: <<extend>>
+VP ..> LV : <<include>>
+LV <.. L: <<extend>>
+
+GD ..> LD :<<include>>
+
+GD <.. EP : <<extend>>
+GD <.. EM : <<extend>>
+
+GA ..> LP :<<include>>
+LP <.. BL :<<extend>>
+LP <.. RB :<<extend>>
+
+PT ..> EF :<<include>>
+PT <.. GP :<<extend>>
+PT <.. GC :<<extend>>
+PT <.. GF :<<extend>>
+@endum
