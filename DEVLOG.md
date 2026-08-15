@@ -5,15 +5,9 @@ Objectif
 
 L'objectif de ce projet est de développer une application de gestion commerciale permettant de gérer :
 
-    les utilisateurs et leurs rôles ;
-    les clients ;
-    les produits ;
-    les commandes et les ventes ;
-    les paiements et les règlements ;
-    les dettes clients ;
-    les fournisseurs ;
-    les approvisionnements ;
-    les entrées et sorties de stock.
+les utilisateurs et leurs roles, les clients, les produits, les dettes clients, les fournisseurs, les approvisionnements,les entrées et sorties de stocks
+les commandes et les ventes, les paiments et les reglements, 
+
 
 L'application est développée en PHP avec une architecture orientée objet (POO), PDO et une base de données PostgreSQL avec un fallback SQLite.
 
