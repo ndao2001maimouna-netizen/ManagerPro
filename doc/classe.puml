@@ -25,8 +25,9 @@ class Client{
 
 class Commande{
     - id : int
-    - datCommande : int
-    - montantInitial : int
+    - datCommande : Date
+    - montantInitial : float
+    - montantAvance : float
     
 }
 
@@ -83,6 +84,19 @@ class LigneAppro{
     - prixReel : float
 }
 
+class Dette {
+    - id : int
+    - refDette : String
+    - date: Date
+    - montantInitial : float
+    - montantPaye : float
+    - resteDu : float
+    - id_commande : int
+}
+
+
+Commande "1" --> "0..1" Dette
+Client "1" --> "0..*" Dette
 
 
 Utilisateur "0..*" --> "1" Role 
