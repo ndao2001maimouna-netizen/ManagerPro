@@ -1,25 +1,31 @@
 <?php
 
 class Database{
-    function deconnecteDB():PDO{
+    private static ?PDO $pdo = null;
 
-static $pdo = null;
+    public static function getConnexion():PDO{
+        if(self::$pdo == null){
 
-if($pdo == null){
+            try {
 
-$pdo = new PDO(
-        "pgsql:host=localhost;dbname=managerPro;port=5432",
-        "postgres",
-        "user1234"
-    );
-
-    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
-   
-
+                self::$pdo = new PDO(
+                        "pgsql:host=localhost;dbname=managerpro;port=5432",
+                        "postgres",
+                        "user123"
+                    );
+                    echo 'connexion postgres';
+                  
+            } 
+            catch (\Throwable $th) {
+                self::$pdo = new PDO("sqlite:".dirname(dirname(__DIR__))."/erp.db");
+               echo 'connexion sqlite';
+            }
+            self::$pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_ASSOC);
+            self::$pdo->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
+            
+            }
+     return self::$pdo; 
+    }
 }
 
-     return $pdo;
-}
-
-}
+Database::getConnexion();

@@ -21,3 +21,5 @@ j'ai fait des modification sur le diagramme de classe  ajouter une classe modifi
 
 
 J'ai cree le base de  donnees avant de creer les Entity
+
+j'ai modifie mon database en ajoutant la connexion sqlite puis inserer des donner sur le base de donnees
