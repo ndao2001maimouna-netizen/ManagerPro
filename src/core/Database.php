@@ -1,5 +1,7 @@
 <?php
 
+namespace App\Core;
+
 class Database {
     private static ?PDO $pdo = null;
 
@@ -27,5 +29,34 @@ class Database {
         
         return self::$pdo; 
     }
+
+    public static function query(string $sql, bool $single = true):array{
+        $query = self::getConnexion()->query($sql);
+        $result= $single ? $query->fetch():$query->fetchAll();
+        return $result != false ? $result : [];
+    }
+
+
+    public static function prepare(string $sql, array $datas) {
+        $prepare = self::getConnexion()->prepare($sql);
+        $prepare->execute($datas);
+        return $prepare;
+    }
+
+
+    public static function executeQuery(string $sql, array $datas, bool $single = true) : array {
+        $statement=self::prepare( $sql,  $datas);
+    
+       $result = $single ? $statement->fetch():$statement->fetchAll();
+        return $result != false ? $result : [];
+    }
+
+    
+    public static function executeUpdate( string $sql, array $datas) : int {
+        prepare($pdo, $sql,  $datas);
+        
+        return (str_starts_with(strtoupper($sql), 'INSERT'))  ? $pdo->lastInsertId() : $prepare->rowCount();
+    }
+
 }
 

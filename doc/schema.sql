@@ -123,7 +123,7 @@ CREATE TABLE approvisionnements (
     date_appro DATE NOT NULL DEFAULT CURRENT_DATE,
     fournisseur_id INT REFERENCES fournisseurs(id) ,
     utilisateur_id INT REFERENCES utilisateurs(id) ,
-    statut_appro_id INT REFERENCES statuts_appro(id) 
+    statut_appro_id INT REFERENCES  statutsAppro(id) 
 );
 
 
