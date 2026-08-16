@@ -26,6 +26,10 @@ class Approvisionnement{
         return $this->id;
     }
 
+      public function getref_bl(): string
+    {
+        return $this->ref_bl;
+    }
      public function getdate_appro(): DateTime
     {
         return $this->date_appro;
