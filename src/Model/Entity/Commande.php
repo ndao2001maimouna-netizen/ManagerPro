@@ -2,13 +2,14 @@
 
 
 class Commande{
-   private int $id ;
+   
    private  DateTime $dateCommande;
    private float $montantInitial;
    private float $montantAvance;
    private client $client_id ;
    private Utilisateur $utilisateur_id;
    private modepaiement $modepaiement_id;
+   private array $Reglement;
   
     function __construct(int $id,  DateTime $dateCommande, float $montantInitial, float $montantAvance, clients $client_id,
                          Utilisateur $utilisateur_id, modepaiement $modepaiement_id){

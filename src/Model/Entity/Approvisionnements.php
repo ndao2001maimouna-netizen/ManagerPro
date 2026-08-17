@@ -2,12 +2,13 @@
 
 
 class Approvisionnement{
-   private int $id ;
+  
    private string $ref_bl;
    private  DateTime $date_appro;
    private  Fournisseur $fournisseur_id ;
    private Utilisateur $utilisateur_id;
    private StatutsAppro $statut_appro_id;
+   private array $LigneAppro;
   
     function __construct(int $id, string $ref_bl,  DateTime $date_appro, Fournisseur $fournisseur_id,
                          Utilisateur $utilisateur_id,  StatutsAppro $statut_appro_id){

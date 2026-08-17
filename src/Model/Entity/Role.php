@@ -1,7 +1,7 @@
 <?php
-class Role{
-    private int $id ;
+class Role{   
     private string $nom;
+    private array $Utilisateur;
       
      function __construct(int $id, string $nom){
             $this->id = $id; 

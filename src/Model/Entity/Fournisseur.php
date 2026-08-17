@@ -1,7 +1,7 @@
 
 <?php
 class Fournisseur{
-    private int $id ;
+  
     private string $nom;
     private string $prenom;
     private string $email;

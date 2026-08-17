@@ -1,7 +1,7 @@
 <?php
 
 class Dette{
-   private int $id ;
+  
    private string $refDette;
    private  DateTime $dateDette;
    private float $montantInitial;

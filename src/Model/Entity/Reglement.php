@@ -1,7 +1,7 @@
 <?php
 
 class Reglement{
-   private int $id ;
+  
    private  DateTime $dateReglement;
    private float $montant;
    private Commande $commande_id ;

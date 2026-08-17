@@ -1,13 +1,14 @@
 
 <?php
 class Utilisateur{
-    private int $id ;
+   
     private string $nom_complet;
     private string $email;
     private string $mot_passe;
     private string $tel;
     private string $adresse ;
     private Role $role_id;
+    private array $Commande;
    
      function __construct(int $id, string $nom_complet,  string $email, string $mot_passe, string $tel, string  $adresse, Role $role_id){
             $this->id = $id; 

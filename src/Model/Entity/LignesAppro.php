@@ -2,7 +2,7 @@
 <?php
 
 class LigneAppro{
-   private int $id ;
+
    private float $qteAppro ;
    private float $qteRecu ;
    private float $prixReel ;

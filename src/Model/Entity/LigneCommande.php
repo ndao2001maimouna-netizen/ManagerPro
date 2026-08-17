@@ -2,7 +2,7 @@
 <?php
 
 class LigneCommende{
-   private int $id ;
+   
    private int $qteCommande;
    private float $prixReel ;
     private Commande $commande_id ;

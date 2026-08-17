@@ -2,11 +2,12 @@
 
 
 class Client{
-    private int $id ;
+   
     private string $nom;
     private string $prenom;
     private string $email;
     private string $tel;
+    private  array $Commande;
    
      function __construct(int $id, string $nom, string $prenom, string $email, string $tel ){
             $this->id = $id; 

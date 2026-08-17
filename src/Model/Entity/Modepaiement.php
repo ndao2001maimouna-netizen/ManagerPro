@@ -1,7 +1,8 @@
 <?php
 class Modepaiement {
-    private int $id ;
+  
     private string $mode;
+    private array $Commande;
       
      function __construct(int $id, string $mode){
             $this->id = $id; 

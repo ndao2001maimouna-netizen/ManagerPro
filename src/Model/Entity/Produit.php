@@ -2,10 +2,11 @@
 <?php
 
 class Produit{
-   private int $id ;
+   
    private string $libelle;
    private float $prix_vente ;
    private float $stock_initial;
+    private array $LigneAppro;
   
   
     function __construct(int $id,  string $libelle, float $prix_vente , float $stock_initial){
