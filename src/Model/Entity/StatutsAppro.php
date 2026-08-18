@@ -4,7 +4,7 @@ class StatutsAppro{
     private  array $approvisionnement;
       
      function __construct(int $id, string $nom){
-            $this->id = $id; 
+        
             $this->nom = $nom; 
      }
 

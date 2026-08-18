@@ -10,8 +10,7 @@ class Produit{
   
   
     function __construct(int $id,  string $libelle, float $prix_vente , float $stock_initial){
-
-         $this->id = $id;               
+             
          $this->libelle =  $libelle;               
          $this->prix_vente  = $prix_vente ;               
          $this->stock_initial = $stock_initial;               

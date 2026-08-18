@@ -10,7 +10,7 @@ class Client{
     private  array $Commande;
    
      function __construct(int $id, string $nom, string $prenom, string $email, string $tel ){
-            $this->id = $id; 
+          
             $this->nom = $nom; 
             $this->prenom = $prenom; 
             $this->email= $email; 

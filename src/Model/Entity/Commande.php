@@ -13,8 +13,7 @@ class Commande{
   
     function __construct(int $id,  DateTime $dateCommande, float $montantInitial, float $montantAvance, clients $client_id,
                          Utilisateur $utilisateur_id, modepaiement $modepaiement_id){
-
-         $this->id = $id;               
+              
          $this->dateCommande = $dateCommande;               
          $this->montantInitial = $montantInitial;               
          $this->montantAvance = $montantAvance;               

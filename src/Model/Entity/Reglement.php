@@ -8,7 +8,7 @@ class Reglement{
   
     function __construct(int $id, DateTime $dateReglement, float $montant, Commande $ommande_id){
 
-         $this->id = $id;                
+                      
          $this->dateDette = $dateDette;               
          $this->montant = $montant;                             
          $this->commande_id = $commande_id;

@@ -5,7 +5,7 @@ class Modepaiement {
     private array $Commande;
       
      function __construct(int $id, string $mode){
-            $this->id = $id; 
+        
             $this->mode= $mode; 
      }
 
