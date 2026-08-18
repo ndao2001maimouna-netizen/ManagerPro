@@ -1,7 +1,7 @@
 
 <?php
 class Utilisateur{
-   
+    private int $id ;
     private string $nom_complet;
     private string $email;
     private string $mot_passe;
@@ -11,7 +11,7 @@ class Utilisateur{
     private array $Commande;
    
      function __construct(int $id, string $nom_complet,  string $email, string $mot_passe, string $tel, string  $adresse, Role $role_id){
-    
+            $this->id = $id; 
             $this->nomComplet = $nom_complet; 
             $this->email= $email; 
              $this->mot_passe = $mot_passe; 

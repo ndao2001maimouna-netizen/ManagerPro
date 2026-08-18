@@ -2,7 +2,7 @@
 <?php
 
 class LigneAppro{
-
+     private int $id ;
    private float $qteAppro ;
    private float $qteRecu ;
    private float $prixReel ;
@@ -10,7 +10,8 @@ class LigneAppro{
     private Produit $produit_id  ;
   
     function __construct(int $id, float $qteAppro, float $qteRecu, float  $prixReel, Approvisionnement $approvisionnement_id, Produit $produit_id ){
-             
+
+         $this->id = $id;               
          $this->qteAppro =  $qteAppro;               
          $this->qteRecu  = $qteRecu;  
          $this->prixReel  = $prixReel;  

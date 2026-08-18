@@ -1,7 +1,7 @@
 <?php
 
 class Dette{
-  
+   private int $id ;
    private string $refDette;
    private  DateTime $dateDette;
    private float $montantInitial;
@@ -11,7 +11,7 @@ class Dette{
   
     function __construct(int $id,  string $refDette, DateTime $dateDette, float $montantInitial, float $montantPaye, float $resteDu, Commande $ommande_id){
 
-                      
+         $this->id = $id;               
          $this->refDette = $refDette;               
          $this->dateDette = $dateDette;               
          $this->montantInitial = $montantInitial;               

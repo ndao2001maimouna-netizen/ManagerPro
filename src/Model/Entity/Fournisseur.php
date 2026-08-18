@@ -1,7 +1,7 @@
 
 <?php
 class Fournisseur{
-  
+   private int $id ;
     private string $nom;
     private string $prenom;
     private string $email;
@@ -9,7 +9,7 @@ class Fournisseur{
     private string $adresse ;
    
      function __construct(int $id, string $nom, string $prenom, string $email, string $tel, string  $adresse){
-           
+            $this->id = $id; 
             $this->nom = $nom; 
             $this->prenom = $prenom; 
             $this->email= $email; 

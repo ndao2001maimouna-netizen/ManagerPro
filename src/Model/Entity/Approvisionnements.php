@@ -2,7 +2,7 @@
 
 
 class Approvisionnement{
-  
+   private int $id ;
    private string $ref_bl;
    private  DateTime $date_appro;
    private  Fournisseur $fournisseur_id ;
@@ -12,7 +12,8 @@ class Approvisionnement{
   
     function __construct(int $id, string $ref_bl,  DateTime $date_appro, Fournisseur $fournisseur_id,
                          Utilisateur $utilisateur_id,  StatutsAppro $statut_appro_id){
-              
+
+         $this->id = $id;               
          $this->ref_bl= $ref_bl;               
          $this->date_appro = $date_appro;               
          $this->fournisseur_id = $fournisseur_id;                             

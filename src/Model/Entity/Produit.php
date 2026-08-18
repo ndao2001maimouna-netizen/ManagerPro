@@ -2,7 +2,7 @@
 <?php
 
 class Produit{
-   
+    private int $id ;
    private string $libelle;
    private float $prix_vente ;
    private float $stock_initial;
@@ -10,7 +10,8 @@ class Produit{
   
   
     function __construct(int $id,  string $libelle, float $prix_vente , float $stock_initial){
-             
+
+         $this->id = $id;               
          $this->libelle =  $libelle;               
          $this->prix_vente  = $prix_vente ;               
          $this->stock_initial = $stock_initial;               

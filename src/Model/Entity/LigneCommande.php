@@ -2,7 +2,7 @@
 <?php
 
 class LigneCommende{
-   
+    private int $id ;
    private int $qteCommande;
    private float $prixReel ;
     private Commande $commande_id ;
@@ -12,6 +12,7 @@ class LigneCommende{
   
     function __construct(int $id,  int $qteCommande, float $prixReel , Commande $commande_id, Produit $produit_id ){
 
+         $this->id = $id;               
          $this->qteCommande =  $qteCommande;               
          $this->prixReel  = $prixReel  ;  
          $this->commande_id = $commande_id;             
